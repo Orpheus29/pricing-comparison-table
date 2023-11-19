@@ -15,7 +15,9 @@
     <script defer>
       document.addEventListener("DOMContentLoaded", () => {
         const switcher = document.querySelector(".main__plan-switcher");
-        const billingPlan = document.querySelectorAll(".main__switcher-block-mode");
+        const billingPlan = document.querySelectorAll(
+          ".main__switcher-block-mode"
+        );
         const priceBasic = document.querySelector(".plan--basic");
         const priceStandard = document.querySelector(".plan--standard");
         const pricePremium = document.querySelector(".plan--premium");
@@ -35,8 +37,8 @@
           }
 
           switcher.classList.toggle("yearly");
-          priceSave.forEach(elem => elem.classList.toggle("visible"));
-          billingPlan.forEach(el => el.classList.toggle("highlight"));
+          priceSave.forEach((elem) => elem.classList.toggle("visible"));
+          billingPlan.forEach((el) => el.classList.toggle("highlight"));
         });
       });
     </script>
@@ -60,14 +62,16 @@
             <h2 class="main__card-title">Basic</h2>
 
             <p class="main__card-pricing">
-              <span class="main__card-pricing-price-width plan--basic">29$</span>
+              <span class="main__card-pricing-price-width plan--basic"
+                >29$</span
+              >
 
               <span class="main__card-pricing-subtitle">/per month</span>
             </p>
 
             <p class="main__card-pricing-save">Save $60</p>
 
-            <hr class="main__card-break"/>
+            <hr class="main__card-break" />
 
             <ul class="main__card-features">
               <li class="main__card-features-item">
@@ -102,7 +106,9 @@
             <h2 class="main__card-title">Standard</h2>
 
             <p class="main__card-pricing">
-              <span class="main__card-pricing-price-width plan--standard">49$</span>
+              <span class="main__card-pricing-price-width plan--standard"
+                >49$</span
+              >
 
               <span class="main__card-pricing-subtitle">/per month</span>
             </p>
@@ -144,7 +150,9 @@
             <h2 class="main__card-title">Premium</h2>
 
             <p class="main__card-pricing">
-              <span class="main__card-pricing-price-width plan--premium">69$</span>
+              <span class="main__card-pricing-price-width plan--premium"
+                >69$</span
+              >
 
               <span class="main__card-pricing-subtitle">/per month</span>
             </p>
@@ -174,7 +182,7 @@
                 <span class="main__card-features-item--tick">
                   ✔&nbsp;&nbsp;
                 </span>
-                
+
                 Customized playlist
               </li>
             </ul>
@@ -188,7 +196,7 @@
           class="footer"
           target="_blank"
           rel="noreferrer"
-          href="https://www.linkedin.com/in/oleksii-andriushyn-859907192/"
+          href="https://github.com/Orpheus29/pricing-comparison-table"
         >
         </a>
       </footer>
