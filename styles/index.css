@@ -391,7 +391,7 @@ section {
 
 .footer {
   display: block;
-  background-image: url("../../images/coolest-dog-logo.svg");
+  background-image: url("../images/coolest-dog-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
