@@ -1,0 +1,64 @@
+@mixin onLargeDesktop {
+  @media (min-width: $large-desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin onLargeTablet {
+  @media (min-width: $large-tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin hover($property, $toValue) {
+  transition: #{$property} 0.3s;
+
+  &:hover {
+    #{$property}: $toValue;
+  }
+}
+
+@mixin pageGrid {
+  --columns: 1;
+  display: grid;
+  row-gap: 1%;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include onTablet {
+    --columns: 2;
+    column-gap: 10px;
+    row-gap: 1.5%;
+    max-width: 580px;
+    place-self: center;
+  }
+
+  @include onLargeTablet {
+    --columns: 3;
+    max-width: 900px;
+  }
+
+  @include onDesktop {
+    column-gap: 20px;
+    max-width: 1260px;
+  }
+}
+
+%glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}

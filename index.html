@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Best Pricing!</title>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const switcher = document.querySelector(".main__plan-switcher");
+        const billingPlan = document.querySelectorAll(".main__switcher-block-mode");
+        const priceBasic = document.querySelector(".plan--basic");
+        const priceStandard = document.querySelector(".plan--standard");
+        const pricePremium = document.querySelector(".plan--premium");
+        const priceSave = document.querySelectorAll(".main__card-pricing-save");
+
+        console.log(switcher);
+
+        switcher.addEventListener("click", () => {
+          if (switcher.classList.contains("yearly")) {
+            priceBasic.innerHTML = "29$";
+            priceStandard.innerHTML = "49$";
+            pricePremium.innerHTML = "69$";
+          } else {
+            priceBasic.innerHTML = "24$";
+            priceStandard.innerHTML = "39$";
+            pricePremium.innerHTML = "54$";
+          }
+
+          switcher.classList.toggle("yearly");
+          priceSave.forEach(elem => elem.classList.toggle("visible"));
+          billingPlan.forEach(el => el.classList.toggle("highlight"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="page__body">
+      <header class="header">
+        <h1 class="header__title">Choose the plan that fits for your team</h1>
+      </header>
+      <main class="main">
+        <section class="main__switcher-block">
+          <p class="main__switcher-block-mode highlight">Monthly</p>
+
+          <div class="main__plan-switcher"></div>
+
+          <p class="main__switcher-block-mode">Yearly</p>
+        </section>
+
+        <section class="main__billing-table">
+          <article class="main__card">
+            <h2 class="main__card-title">Basic</h2>
+
+            <p class="main__card-pricing">
+              <span class="main__card-pricing-price-width plan--basic">29$</span>
+
+              <span class="main__card-pricing-subtitle">/per month</span>
+            </p>
+
+            <p class="main__card-pricing-save">Save $60</p>
+
+            <hr class="main__card-break"/>
+
+            <ul class="main__card-features">
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--tick">
+                  ✔&nbsp;&nbsp;
+                </span>
+
+                One account
+              </li>
+
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--cross">
+                  ✘&nbsp;&nbsp;
+                </span>
+
+                Unlimited songs
+              </li>
+
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--cross">
+                  ✘&nbsp;&nbsp;
+                </span>
+
+                Customized playlist
+              </li>
+            </ul>
+
+            <a href="#" class="main__card-button ripple">Sign Up</a>
+          </article>
+
+          <article class="main__card">
+            <h2 class="main__card-title">Standard</h2>
+
+            <p class="main__card-pricing">
+              <span class="main__card-pricing-price-width plan--standard">49$</span>
+
+              <span class="main__card-pricing-subtitle">/per month</span>
+            </p>
+
+            <p class="main__card-pricing-save">Save $120</p>
+
+            <hr />
+
+            <ul class="main__card-features">
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--tick">
+                  ✔&nbsp;&nbsp;
+                </span>
+
+                One account
+              </li>
+
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--tick">
+                  ✔&nbsp;&nbsp;
+                </span>
+
+                Unlimited songs
+              </li>
+
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--cross">
+                  ✘&nbsp;&nbsp;
+                </span>
+
+                Customized playlist
+              </li>
+            </ul>
+
+            <a href="#" class="main__card-button ripple">Sign Up</a>
+          </article>
+
+          <article class="main__card">
+            <h2 class="main__card-title">Premium</h2>
+
+            <p class="main__card-pricing">
+              <span class="main__card-pricing-price-width plan--premium">69$</span>
+
+              <span class="main__card-pricing-subtitle">/per month</span>
+            </p>
+
+            <p class="main__card-pricing-save">Save $180</p>
+
+            <hr />
+
+            <ul class="main__card-features">
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--tick">
+                  ✔&nbsp;&nbsp;
+                </span>
+
+                One account
+              </li>
+
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--tick">
+                  ✔&nbsp;&nbsp;
+                </span>
+
+                Unlimited songs
+              </li>
+
+              <li class="main__card-features-item">
+                <span class="main__card-features-item--tick">
+                  ✔&nbsp;&nbsp;
+                </span>
+                
+                Customized playlist
+              </li>
+            </ul>
+
+            <a href="#" class="main__card-button ripple">Sign Up</a>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <a
+          class="footer"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/oleksii-andriushyn-859907192/"
+        >
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

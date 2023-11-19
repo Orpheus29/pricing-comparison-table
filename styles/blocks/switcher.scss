@@ -1,0 +1,69 @@
+.main {
+  margin-inline: auto;
+
+  &__switcher-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+
+    @include onDesktop {
+      font-size: 24px;
+    }
+
+    &-mode {
+      transition: text-shadow .1s;
+
+      &.highlight {
+        display: inline;
+        line-height: 50%;
+        border-radius: 30%;
+        text-shadow: $primary-color 0 -10px 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 16px rgba(232, 232, 240, 0.8);
+      }
+    }
+  }
+
+  &__plan-switcher {
+    cursor: pointer;
+    border-radius: 40px;
+
+    @extend %glass-effect;
+
+    padding: 5px;
+    width: 60px;
+
+    transition: backdrop-filter .3s;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      border-radius: 50%;
+      padding-bottom: 50%;
+      background-color: $primary-color;
+      opacity: 0.8;
+
+      transition: transform .3s;
+    }
+
+    &.yearly::after {
+      transform: translateX(100%);
+    }
+
+    &:hover {
+      backdrop-filter: blur(5px);
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.2);
+    }
+
+    @include onTablet {
+      width: 80px;
+    }
+
+    @include onDesktop {
+      width: 80px;
+    }
+  }
+}

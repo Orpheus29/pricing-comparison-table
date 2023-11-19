@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../images/bkgr2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: $primary-color;
+  line-height: 140%;
+  text-align: left;
+  scroll-behavior: smooth;
+  user-select: none;
+
+  &__body {
+    padding-inline: 2%;
+    margin-inline: auto;
+    min-width: 320px;
+    max-width: 1320px;
+    animation-name: Appearance;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.1, -.6, .2, 0);
+  }
+}
+
+@keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

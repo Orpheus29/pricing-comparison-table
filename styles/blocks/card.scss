@@ -1,0 +1,167 @@
+.main {
+  &__billing-table {
+    @include pageGrid;
+
+    padding-top: 3%;
+    margin-bottom: 30px;
+    margin-inline: auto;
+
+    @include onTablet {
+      & :nth-child(3) {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 2;
+      }
+    }
+
+    @include onLargeTablet {
+      & :nth-child(3) {
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 1;
+      }
+    }
+  }
+
+  &__card {
+    place-self: center;
+    border-radius: 25px;
+
+    @extend %glass-effect;
+
+    padding-top: 30px;
+    padding-inline: 20px;
+    padding-bottom: 15px;
+    cursor: default;
+
+    transition: backdrop-filter .3s;
+
+    &:hover {
+      backdrop-filter: blur(5px);
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.2);
+    }
+
+    @include onTablet {
+      padding-inline: 30px;
+    }
+
+    @include onDesktop {
+      padding: 40px;
+      padding-bottom: 25px;
+    }
+
+    @include onLargeDesktop {
+      padding: 50px;
+      padding-bottom: 40px;
+      width: 280px;
+    }
+
+    &-title {
+      font-weight: normal;
+      font-size: 36px;
+
+      @include onDesktop {
+        font-size: 48px;
+      }
+    }
+
+    &-pricing {
+      display: flex;
+      align-items: center;
+      width: 215px;
+      padding-top: 15%;
+      padding-bottom: 10%;
+      font-size: 72px;
+
+      @include onTablet {
+        padding-top: 20%;
+        padding-bottom: 10%;
+        font-size: 80px;
+      }
+
+      @include onDesktop {
+        padding-top: 25%;
+        padding-bottom: 15%;
+        font-size: 96px;
+        width: 250px;
+      }
+
+      &-price-width {
+        width: 130px;
+
+        @include onTablet {
+          width: 140px;
+        }
+
+        @include onDesktop {
+          width: 170px;
+        }
+      }
+
+      &-subtitle {
+        font-size: 16px;
+        padding-left: 7%;
+
+        @include onTablet {
+          font-size: 20px;
+        }
+
+        @include onDesktop {
+          font-size: 24px;
+        }
+      }
+
+      &-save {
+        opacity: 0;
+        font-size: 18px;
+        padding-top: 5px;
+        color: chartreuse;
+
+        transition: opacity 0.3s;
+
+        @include onTablet {
+          font-size: 24px;
+        }
+
+        @include onLargeTablet {
+          font-size: 28px;
+        }
+
+        @include onDesktop {
+          font-size: 36px;
+        }
+
+        &.visible {
+          opacity: .7;
+        }
+      }
+    }
+
+    hr {
+      margin-top: 20px;
+    }
+
+    &-features {
+      margin-block: 20px;
+      list-style: none;
+
+      @include onTablet {
+        margin-block: 30px;
+      }
+
+      @include onDesktop {
+        margin-block: 35px;
+      }
+
+      &-item {
+        padding-bottom: 10px;
+
+        &--tick {
+          color: $tick-color;
+        }
+
+        &--cross {
+          color: $cross-color;
+        }
+      }
+    }
+  }
+}

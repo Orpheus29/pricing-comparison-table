@@ -1,0 +1,22 @@
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::before {
+  content: "";
+  position: absolute;
+  left: 45%;
+  z-index: 1;
+  width: 10%;
+  height: 25%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ripple:active::before {
+  transform: scale(12);
+  box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.15);
+
+  transition: transform 1s;
+}

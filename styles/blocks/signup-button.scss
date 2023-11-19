@@ -1,0 +1,30 @@
+.main__card-button {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background: $secondary-color;
+  border-radius: 10px;
+  padding-block: 10px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+
+  @include onTablet {
+    border-radius: 20px;
+    padding-block: 20px;
+  }
+
+  @include onDesktop {
+    border-radius: 20px;
+    padding-block: 20px;
+  }
+
+  @include hover(box-shadow, 1px 4px 16px rgba(232, 232, 240, 0.4));
+
+  &:active {
+    color: chartreuse;
+    text-shadow: $primary-color 0 2px 10px;
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.6);
+  }
+}
