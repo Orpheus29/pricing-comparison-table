@@ -22,11 +22,11 @@
   }
 }
 
-@mixin hover($property, $toValue) {
-  transition: #{$property} 0.3s;
+@mixin hover($styles...) {
+  transition: all 0.3s;
 
   &:hover {
-    #{$property}: $toValue;
+    @content;
   }
 }
 

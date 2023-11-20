@@ -117,7 +117,7 @@ section {
   border-radius: 40px;
   padding: 5px;
   width: 60px;
-  transition: backdrop-filter 0.3s;
+  transition: all 0.3s;
 }
 .main__plan-switcher::after {
   content: "";
@@ -198,7 +198,7 @@ section {
   padding-inline: 20px;
   padding-bottom: 15px;
   cursor: default;
-  transition: backdrop-filter 0.3s;
+  transition: all 0.3s;
 }
 .main__card:hover {
   backdrop-filter: blur(5px);
@@ -338,28 +338,22 @@ section {
   width: 100%;
   display: inline-block;
   text-align: center;
-  background: rgba(21, 23, 24, 0.8);
-  border-radius: 10px;
+  background-color: rgba(21, 23, 24, 0.8);
+  border-radius: 20px;
   padding-block: 10px;
   color: white;
   text-decoration: none;
   letter-spacing: 2px;
   transition: color 0.3s;
-  transition: box-shadow 0.3s;
+  transition: all 0.3s;
 }
 @media (min-width: 600px) {
   .main__card-button {
-    border-radius: 20px;
-    padding-block: 20px;
-  }
-}
-@media (min-width: 1075px) {
-  .main__card-button {
-    border-radius: 20px;
     padding-block: 20px;
   }
 }
 .main__card-button:hover {
+  background-color: rgba(21, 23, 24, 0.6);
   box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
 }
 .main__card-button:active {
@@ -402,7 +396,7 @@ section {
   margin-inline: auto;
   opacity: 0.9;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 .footer:hover {
   transform: scale(1.05);
